@@ -1,6 +1,6 @@
-# 🎟️ Ticketbird (Django)
+# Ticketbird (With Django)
 
-A minimal Django-backed event booking prototype with real models, auth, and booking flow.
+A minimal Django-backed event booking prototype with real models, auths, and booking flow.
 
 ## Quickstart
 ```bash
