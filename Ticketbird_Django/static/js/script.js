@@ -1,0 +1,1 @@
+console.log('Ticketbird Django static loaded');

@@ -1,0 +1,8 @@
+{% extends 'core/base.html' %}
+{% block title %}Payment Successful • Ticketbird{% endblock %}
+{% block content %}
+  <h2>✅ Payment Successful</h2>
+  <p>Your booking for <strong>{{ booking.event.title }}</strong> is confirmed.</p>
+  <p>Status: <span style="color: green; font-weight: bold;">{{ booking.payment_status|capfirst }}</span></p>
+  <a href="{% url 'dashboard' %}">Go to Dashboard</a>
+{% endblock %}

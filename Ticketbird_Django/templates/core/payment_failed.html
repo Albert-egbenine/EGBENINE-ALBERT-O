@@ -1,0 +1,7 @@
+{% extends 'core/base.html' %}
+{% block content %}
+  <h2>Payment Failed ❌</h2>
+  <p>Your booking for <strong>{{ booking.event.title }}</strong> could not be completed.</p>
+  <p>Status: {{ booking.payment_status }}</p>
+  <a href="{% url 'dashboard' %}">Go to Dashboard</a>
+{% endblock %}

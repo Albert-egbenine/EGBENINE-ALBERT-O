@@ -1,0 +1,24 @@
+{% extends 'core/base.html' %}
+
+{% block title %}My Dashboard • Ticketbird{% endblock %}
+
+{% block content %}
+  <h2>My Bookings</h2>
+
+  {% if bookings %}
+    <ul class="booking-list">
+      {% for booking in bookings %}
+        <li>
+          <strong>{{ booking.event.title }}</strong>  
+          – {{ booking.tickets }} ticket(s)  
+          – <span class="status {{ booking.payment_status }}">
+              {{ booking.payment_status|title }}
+            </span>  
+          <small>(Booked on {{ booking.booked_at|date:"M d, Y H:i" }})</small>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>You haven’t booked any events yet.</p>
+  {% endif %}
+{% endblock %}

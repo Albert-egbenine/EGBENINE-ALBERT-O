@@ -1,0 +1,18 @@
+{% extends 'core/base.html' %}
+{% load math_filters %}
+{% block title %}Fake Payment Gateway • Ticketbird{% endblock %}
+
+{% block content %}
+  <h2>Fake Payment Gateway</h2>
+  <p>Event: <strong>{{ booking.event.title }}</strong></p>
+  <p>Tickets: <strong>{{ booking.tickets }}</strong></p>
+  <p>Total Amount: <strong>₦{{ booking.event.price|floatformat:2 }} × {{ booking.tickets }} = ₦{{ booking.event.price|floatformat:2|add:0|mul:booking.tickets }}</strong></p>
+
+  <form method="post" action="">
+    {% csrf_token %}
+    <p>Select a payment outcome to continue:</p>
+
+    <button type="submit" name="pay_success" class="btn btn-success">✅ Pay Successfully</button>
+    <button type="submit" name="pay_fail" class="btn btn-danger">❌ Fail Payment</button>
+  </form>
+{% endblock %}
