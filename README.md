@@ -1,9 +1,10 @@
 # EGBENINE-ALBERT-O
-WEB-BASED TICKET BOOKING SYSTEM.
-Ticketbird (With Django)
-A minimal Django-backed event booking prototype with real models, auths, and booking flow.
+# Ticketbird - Web-Based Event Ticket Booking System
+Ticketbird is a web-based event ticket booking system built with Django.  
+It allows users to browse upcoming events, book tickets online, and manage their bookings through a secure, user-friendly platform.
 
 Quickstart
+cd Ticketbird
 python -m venv .venv
 # Windows: .venv\Scripts\activate
 # macOS/Linux: source .venv/bin/activate
